@@ -1,11 +1,9 @@
-package com.productos.apirest.controllers;
+package com.productos.apirest.resources;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
-import lombok.Getter;
-import lombok.Setter;
 import com.productos.apirest.models.Producto;
 import com.productos.apirest.repository.ProductoRepository;
 import io.swagger.annotations.ApiResponse;

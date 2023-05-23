@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
-public interface ProductoRepository extends JpaRepository<Producto, Long> {
+public interface ProductoRepository extends JpaRepository<Producto, Integer> {
 	List<Producto> findByCategoriaAndPrecioGreaterThanEqualAndUbicacion(String categoria, BigDecimal precio, String ubicacion);
 	List<Producto> findByNombreContaining(String texto);
 	List<Producto> findByCategoria(String categoria);
