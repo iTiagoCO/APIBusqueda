@@ -1,0 +1,1 @@
+docker run -p 3306:3306 --name mysql-container -e MYSQL_ROOT_PASSWORD=9004 -e MYSQL_DATABASE=apibusqueda -e MYSQL_USER=root -e MYSQL_PASSWORD=9004 mysql

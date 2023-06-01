@@ -1,14 +1,11 @@
-# Usa una imagen base de Java 8
-FROM openjdk:8
+# Establece la imagen base de Docker
+FROM openjdk:8-jdk-alpine
 
 # Establece el directorio de trabajo dentro del contenedor
 WORKDIR /app
 
-# Copia el archivo JAR generado por tu proyecto en el directorio de trabajo del contenedor
-COPY target/apirest-0.0.1-SNAPSHOT.jar app.jar
+# Copia el archivo JAR de la aplicación al contenedor
+COPY target/*.jar /app/apirest.jar
 
-# Expone el puerto en el que se ejecuta tu aplicación dentro del contenedor
-EXPOSE 8080
-
-# Comando para ejecutar tu aplicación cuando el contenedor se inicie
-CMD ["java", "-jar", "app.jar"]
+# Ejecuta la aplicación cuando se inicie el contenedor
+CMD ["java", "-jar", "apirest.jar"]
